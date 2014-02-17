@@ -49,7 +49,7 @@ class ReportsController extends BaseController {
 	
 	public function getDailySales($custom_date = null)
 	{
-		$date_text = $custom_date ? date('M d, Y', strtotime($custom_date)) : 'Today'; //'Today ('.date('M d, Y').')'
+		$date_text = $custom_date ? date('M d, Y', strtotime($custom_date)) : 'Today ('.date('M d, Y').')'; //'Today ('.date('M d, Y').')'
 		$date_text = 'Sales as of '.$date_text;
 
 		$i = Inventory::sales()->today($custom_date)->lists('id');

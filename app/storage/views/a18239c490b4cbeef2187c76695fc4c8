@@ -2,13 +2,17 @@
 <?php $__env->startSection('css'); ?>
 	<?php echo HTML::style('style/dashboard.css'); ?>
 	<?php echo HTML::style('datatables/css/datatables.css'); ?>
+  <?php echo HTML::style('datepicker/css/datepicker3.css'); ?>
+  <?php echo HTML::style('datepicker/css/datepicker.css'); ?>
 <?php $__env->stopSection(); ?>
 
 
 <?php $__env->startSection('js'); ?>
 	<?php echo HTML::script('datatables/js/jquery.dataTables.min.js'); ?>
 	<?php echo HTML::script('datatables/js/datatables.js'); ?>
-	<?php echo HTML::script('js/smooth-sliding-menu.js'); ?>
+  <?php echo HTML::script('js/smooth-sliding-menu.js'); ?>
+
+  <?php echo HTML::script('datepicker/js/bootstrap-datepicker.js'); ?>
 	
 	<script type="text/javascript">
 		$(document).ready(function(){
