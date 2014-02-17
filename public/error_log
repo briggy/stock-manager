@@ -1,0 +1,26 @@
+[04-Nov-2013 09:06:36 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/routes.php on line 5
+[22-Jan-2014 10:02:57 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/routes.php on line 5
+[22-Jan-2014 10:03:02 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/routes.php on line 5
+[22-Jan-2014 10:03:21 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/routes.php on line 5
+[22-Jan-2014 11:09:01 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/routes.php on line 5
+[22-Jan-2014 11:10:49 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/routes.php on line 5
+[22-Jan-2014 11:12:21 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/routes.php on line 5
+[22-Jan-2014 11:12:40 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/routes.php on line 5
+[22-Jan-2014 11:12:43 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/routes.php on line 5
+[22-Jan-2014 11:13:36 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/routes.php on line 5
+[22-Jan-2014 11:16:27 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/routes.php on line 5
+[22-Jan-2014 11:18:45 UTC] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/bdiggers/public_html/annas/stock-manager/app/routes.php on line 7
+[22-Jan-2014 11:19:09 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/controllers/AuthController.php on line 7
+[22-Jan-2014 11:19:49 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/controllers/ReportsController.php on line 12
+[22-Jan-2014 11:20:41 UTC] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/bdiggers/public_html/annas/stock-manager/app/storage/views/986831cc5f06c67584d74e4092231dd3 on line 15
+[22-Jan-2014 11:30:08 UTC] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/bdiggers/public_html/annas/stock-manager/app/storage/views/986831cc5f06c67584d74e4092231dd3 on line 15
+[22-Jan-2014 11:30:45 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/storage/views/986831cc5f06c67584d74e4092231dd3 on line 27
+[22-Jan-2014 11:32:09 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/models/Inventory.php on line 30
+[22-Jan-2014 11:33:07 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/controllers/ProductsController.php on line 40
+[22-Jan-2014 11:33:54 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/models/Categ.php on line 32
+[22-Jan-2014 11:34:40 UTC] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/bdiggers/public_html/annas/stock-manager/app/storage/views/9a1a97f9928e1320c56b77895985c680 on line 45
+[22-Jan-2014 11:35:48 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/storage/views/01066e56e4f84b3256e9b123ec4e35cd on line 18
+[22-Jan-2014 15:48:17 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/controllers/SalesController.php on line 64
+[22-Jan-2014 15:48:35 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/bdiggers/public_html/annas/stock-manager/app/controllers/SalesController.php on line 64
+[30-Jan-2014 07:45:43 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/bdiggers/public_html/annas/stock-manager/app/controllers/SalesController.php on line 155
+[30-Jan-2014 07:45:56 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/bdiggers/public_html/annas/stock-manager/app/controllers/SalesController.php on line 155

@@ -1,0 +1,83 @@
+
+<?php $__env->startSection('pt'); ?> Update Product <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('c'); ?>
+	
+	<div class="row">
+        <div class="col-lg-12">
+          <div class="widget">
+            <div class="widget-header"> <i class="icon-align-left"></i>
+              <h3>Please enter the product information below </h3>
+            </div>
+
+            <div class="widget-content">
+            <?php echo Form::model($p, ['class'=>'form-horizontal', 'route'=>['products.update', $p->id], 'method'=>'PUT', 'files'=>true]); ?>
+                <fieldset  class="col-lg-7">
+                  
+                  <div class="control-group">
+                  	<?php echo Form::label('code', 'Product Code', ['class'=>'control-label']); ?>
+                    <div class="controls form-group">
+                      <?php echo Form::text('code', Input::old('code'), ['class'=>'form-control', 'required', 'autofocus']); ?>
+                    </div>
+                  </div>
+
+                  <div class="control-group">
+                  	<?php echo Form::label('name', 'Product Name', ['class'=>'control-label']); ?>
+                    <div class="controls form-group">
+                      <?php echo Form::text('name', Input::old('name'), ['class'=>'form-control', 'required']); ?>
+                    </div>
+                  </div>
+
+                  <div class="control-group">
+                  	<?php echo Form::label('categ_id', 'Category', ['class'=>'control-label']); ?>
+                    <div class="controls form-group">
+                      <?php echo Form::select('categ_id', Categ::getList() ,Input::old('categ_id'), ['class'=>'form-control', 'required']); ?>
+                    </div>
+                  </div>
+
+                  <div class="control-group">
+                  	<?php echo Form::label('cost', 'Product Cost', ['class'=>'control-label']); ?>
+                    <div class="controls form-group">
+                      <?php echo Form::text('cost', Input::old('cost'), ['class'=>'form-control', 'required',  'pattern'=>'\d*.\d*', 'placeholder'=>'0.00']); ?>
+                    </div>
+                  </div>
+
+                  <div class="control-group">
+                  	<?php echo Form::label('price', 'Product Price', ['class'=>'control-label']); ?>
+                    <div class="controls form-group">
+                      <?php echo Form::text('price', Input::old('price'), ['class'=>'form-control', 'required', 'pattern'=>'\d*.\d*', 'placeholder'=>'0.00']); ?>
+                    </div>
+                  </div>
+
+                  <div class="control-group">
+                  	<?php echo Form::label('alert_qty', 'Alert Quantity', ['class'=>'control-label']); ?>
+                    <div class="controls form-group">
+                      <?php echo Form::text('alert_qty', Input::old('alert_qty'), ['class'=>'form-control', 'required', 'pattern'=>'\d*']); ?>
+                    </div>
+                  </div>
+
+                  <div class="control-group">
+                  	<?php echo Form::label('file', 'Product Image', ['class'=>'control-label']); ?>
+                    <div class="controls form-group">
+                      <?php echo HTML::image($p->img(), null, ['class'=>'img-thumbnail', 'style'=>'height:150px']); ?>
+                      <?php echo Form::file('file', ['class'=>'form-control']); ?>
+                      
+                    </div>
+                  </div>
+
+                </fieldset>
+                <div class="form-actions">
+                  <div>
+                    <button class="btn btn-primary" type="submit">Update Product</button>
+                    <a href="<?php echo route('products.index'); ?>" class="btn btn-default" type="button">Cancel</a>
+                  </div>
+                </div>
+
+                <?php echo Form::close(); ?>
+
+             </div>
+             </div>
+             </div>
+             </div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

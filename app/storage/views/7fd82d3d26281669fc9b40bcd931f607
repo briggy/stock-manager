@@ -1,0 +1,77 @@
+
+<?php $__env->startSection('pt'); ?> New Supplier <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('c'); ?>
+	
+	<div class="row">
+        <div class="col-lg-12">
+          <div class="widget">
+            <div class="widget-header"> <i class="icon-align-left"></i>
+              <h3>Please enter the product information below </h3>
+            </div>
+
+            <div class="widget-content">
+            <?php echo Form::open(['class'=>'form-horizontal', 'route'=>'suppliers.store', 'files'=>true]); ?>
+                <fieldset class="col-lg-6">
+                  
+                 
+
+                  <div class="control-group">
+                  	<?php echo Form::label('name', 'Name', ['class'=>'control-label']); ?>
+                    <div class="controls form-group">
+                      <?php echo Form::text('name', Input::old('name'), ['class'=>'form-control', 'required']); ?>
+                    </div>
+                  </div>
+
+				   <div class="control-group">
+                  	<?php echo Form::label('email', 'Email', ['class'=>'control-label']); ?>
+                    <div class="controls form-group">
+                      <?php echo Form::email('email', Input::old('email'), ['class'=>'form-control', 'required']); ?>
+                    </div>
+                  </div>
+
+                   <div class="control-group">
+                  	<?php echo Form::label('phone', 'Phone', ['class'=>'control-label']); ?>
+                    <div class="controls form-group">
+                      <?php echo Form::text('phone', Input::old('phone'), ['class'=>'form-control', 'required', 'pattern'=>'[0-9]{7,15}']); ?>
+                    </div>
+                  </div>    
+
+                  <div class="control-group">
+                  	<?php echo Form::label('company', 'Company', ['class'=>'control-label']); ?>
+                    <div class="controls form-group">
+                      <?php echo Form::text('company', Input::old('company'), ['class'=>'form-control', 'required', 'pattern'=>'.{1,55}']); ?>
+                    </div>
+                  </div>  
+
+
+                   <div class="control-group">
+                  	<?php echo Form::label('address', 'Address', ['class'=>'control-label']); ?>
+                    <div class="controls form-group">
+                      <?php echo Form::text('address', Input::old('address'), ['class'=>'form-control', 'required', 'pattern'=>'.{2,255}']); ?>
+                    </div>
+                  </div>       
+
+                  <div class="control-group">
+                  	<?php echo Form::label('city', 'City', ['class'=>'control-label']); ?>
+                    <div class="controls form-group">
+                      <?php echo Form::text('city', Input::old('city'), ['class'=>'form-control', 'required', 'pattern'=>'.{2,255}']); ?>
+                    </div>
+                  </div>  
+
+                </fieldset>
+                <div class="form-actions">
+                  <div>
+                    <button class="btn btn-primary" type="submit">Add Supplier</button>
+                    <a href="<?php echo route('suppliers.index'); ?>" class="btn btn-default" type="button">Cancel</a>
+                  </div>
+                </div>
+
+                <?php echo Form::close(); ?>
+
+             </div>
+             </div>
+             </div>
+             </div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

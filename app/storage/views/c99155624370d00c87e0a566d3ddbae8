@@ -1,0 +1,149 @@
+
+<?php $__env->startSection('pt'); ?> <?php echo $pt; ?> <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('js'); ?>
+@parent
+
+<script type="text/javascript">
+  
+  $(document).ready(function(){
+    $('.input-group.date').datepicker({
+        todayBtn: "linked",
+        
+        <?php if($filter_type == 'monthly'): ?>
+          minViewMode: 1,
+          format: "yyyy-mm",
+        <?php else: ?>
+          format: "yyyy-mm-dd",
+        <?php endif; ?>
+
+        todayHighlight: true,
+
+    });
+
+    $('.input-daterange').datepicker({
+        calendarWeeks: true,
+        autoclose: true,
+        todayHighlight: true,
+        format: "yyyy-mm-dd"
+    });
+  });
+
+</script>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('c'); ?>
+	
+	 <div class="row">
+        <div class="col-lg-12">
+          <div class="widget">
+            <div class="widget-content">
+
+            		<div class="body">
+
+
+
+
+        <div class="row">
+          <div class="col-md-12">
+            <button class="btn btn-primary" onclick="window.print()">Print</button> <br /> <br />
+          </div>
+
+          <div class="col-md-6">
+            <h3 style="padding:0; margin:0;"><?php echo $date_text; ?></h3>
+          </div>
+
+          <?php echo Form::open(['url'=>'reports/filter-sales']); ?>
+          <?php echo Form::hidden('filter_type', $filter_type); ?>
+
+
+          <div class="col-md-5">
+            <?php if($filter_type == 'daily' || $filter_type == 'monthly'): ?>
+
+            <div class="input-group date">
+              <input type="text" placeholder="Select Date" class="form-control" required name="date"><span class="input-group-addon"><i class="icon-calendar"></i></span>
+            </div>
+
+            <?php elseif($filter_type = 'weekly'): ?>
+
+            <div class="input-daterange input-group col-md-12" id="datepicker">
+              <input type="text" required placeholder="Select Start Date" class="input-sm form-control" name="start" />
+              <span class="input-group-addon" style="color:#000">to</span>
+              <input type="text" required placeholder="Select End  Date" class="input-sm form-control" name="end" />
+           </div>
+
+            <?php endif; ?>
+          </div>  
+
+          <div>
+              <button class="btn">Select</button>
+          </div>  
+
+          <?php echo Form::close(); ?>
+
+        </div>
+               
+               <br>   
+            		
+                <table class="table table-striped datatable">
+                  <thead>
+                    <tr>
+                      <th class="hidden-xs-portrait">ID</th>
+                      <?php if(!isset($hide_datetime)): ?><th class="hidden-xs-portrait">Date</th><?php endif; ?>
+                      <th class="hidden-xs-portrait">Product Code</th>
+                      <th>Product Name</th>
+                      <th class="hidden-xs"># of Sold Items</th>
+                      <th class="hidden-xs">Remaining</th>
+                      <th class="hidden-xs">Unit Price</th>
+                      <th class="hidden-xs">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                  	<?php foreach($sales as $i=>$s): ?>
+
+
+                  	<tr>
+                  		
+                      <td><?php echo $s->id; ?></td>
+                      <?php if(!isset($hide_datetime)): ?><td><?php echo date('M, d Y', strtotime($s->created_at)); ?></td><?php endif; ?>
+                  		<td><?php echo $s->product->code; ?></td>
+                  		<td><?php echo $s->product->name; ?></td>
+                  		<td><?php echo $s->qty; ?></td>
+                  		<td><?php echo $s->remaining; ?></td>
+                  		<td><?php echo number_format($s->price,2); ?></td>
+                  		<td align="right"><b><?php echo number_format($s->total,2); ?></b></td>
+
+                  	</tr>
+
+                  	<?php endforeach; ?>
+                 
+                  	<tfoot>
+                  		
+                  		<tr>
+                  			<td></td>
+                         <?php if(!isset($hide_datetime)): ?><td></td><?php endif; ?>
+                  			<td></td>
+                  			<td></td>
+                        <td></td>
+                  			<td></td>
+                  			<td align="right">Total : </td>
+                  			<td align="right"><b><?php echo number_format($total,2); ?></b></td>
+                  		</tr>
+
+                  	</tfoot>
+
+                    
+                  </tbody>
+                </table>
+              
+
+            		</div>
+           </div>
+           </div>
+         </div>
+       </div>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

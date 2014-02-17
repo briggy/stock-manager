@@ -1,0 +1,133 @@
+[2014-01-30 01:52:53] log.ERROR: exception 'ErrorException' with message 'Undefined property: WebController::$currentRequest' in C:\Program Files (x86)\Ampps\www\stock-manager\app\controllers\WebController.php:9
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\stock-manager\app\controllers\WebController.php(9): Illuminate\Exception\Handler->handleError(8, 'Undefined prope...', 'C:\Program File...', 9, Array)
+#1 [internal function]: WebController->getIndex()
+#2 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#3 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('getIndex', Array)
+#4 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'getIndex', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 C:\Program Files (x86)\Ampps\www\stock-manager\public\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-01-30 01:54:27] log.ERROR: exception 'ErrorException' with message 'Argument 1 passed to Illuminate\Routing\Router::dispatch() must be an instance of Symfony\Component\HttpFoundation\Request, none given, called in C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php on line 203 and defined' in C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php:995
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(995): Illuminate\Exception\Handler->handleError(4096, 'Argument 1 pass...', 'C:\Program File...', 995, Array)
+#1 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(203): Illuminate\Routing\Router->dispatch()
+#2 C:\Program Files (x86)\Ampps\www\stock-manager\app\controllers\WebController.php(9): Illuminate\Support\Facades\Facade::__callStatic('dispatch', Array)
+#3 C:\Program Files (x86)\Ampps\www\stock-manager\app\controllers\WebController.php(9): Illuminate\Support\Facades\Route::dispatch()
+#4 [internal function]: WebController->getIndex()
+#5 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#6 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('getIndex', Array)
+#7 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'getIndex', Array)
+#8 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#9 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#10 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#11 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#12 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#13 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#14 C:\Program Files (x86)\Ampps\www\stock-manager\public\index.php(49): Illuminate\Foundation\Application->run()
+#15 {main} [] []
+[2014-01-30 01:54:27] log.ERROR: exception 'ErrorException' with message 'Argument 1 passed to Illuminate\Routing\Router::dispatch() must be an instance of Symfony\Component\HttpFoundation\Request, none given, called in C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php on line 203 and defined' in C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php:995
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(995): Illuminate\Exception\Handler->handleError(4096, 'Argument 1 pass...', 'C:\Program File...', 995, Array)
+#1 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(203): Illuminate\Routing\Router->dispatch()
+#2 C:\Program Files (x86)\Ampps\www\stock-manager\app\controllers\WebController.php(9): Illuminate\Support\Facades\Facade::__callStatic('dispatch', Array)
+#3 C:\Program Files (x86)\Ampps\www\stock-manager\app\controllers\WebController.php(9): Illuminate\Support\Facades\Route::dispatch()
+#4 [internal function]: WebController->getIndex()
+#5 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#6 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('getIndex', Array)
+#7 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'getIndex', Array)
+#8 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#9 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#10 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#11 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#12 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#13 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#14 C:\Program Files (x86)\Ampps\www\stock-manager\public\index.php(49): Illuminate\Foundation\Application->run()
+#15 {main} [] []
+[2014-01-30 01:54:31] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Routing\Router::route()' in C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php:203
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-01-30 01:54:54] log.ERROR: exception 'UnexpectedValueException' with message 'The Response content must be a string or object implementing __toString(), "object" given.' in C:\Program Files (x86)\Ampps\www\stock-manager\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php:358
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Http\Response.php(73): Symfony\Component\HttpFoundation\Response->setContent(Object(Illuminate\Routing\Route))
+#1 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\Routing\Route))
+#2 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\Routing\Route))
+#3 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(156): Illuminate\Routing\Router->prepare(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#4 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(126): Illuminate\Routing\Controllers\Controller->processResponse(Object(Illuminate\Routing\Router), 'getIndex', Object(Illuminate\Routing\Route))
+#5 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'getIndex', Array)
+#6 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#7 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#8 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#9 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#10 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#12 C:\Program Files (x86)\Ampps\www\stock-manager\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 {main} [] []
+[2014-01-30 01:55:34] log.ERROR: exception 'UnexpectedValueException' with message 'The Response content must be a string or object implementing __toString(), "object" given.' in C:\Program Files (x86)\Ampps\www\stock-manager\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php:358
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Http\Response.php(73): Symfony\Component\HttpFoundation\Response->setContent(Object(Illuminate\Foundation\Application))
+#1 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\Foundation\Application))
+#2 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\Foundation\Application))
+#3 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(156): Illuminate\Routing\Router->prepare(Object(Illuminate\Foundation\Application), Object(Illuminate\Http\Request))
+#4 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(126): Illuminate\Routing\Controllers\Controller->processResponse(Object(Illuminate\Routing\Router), 'getIndex', Object(Illuminate\Foundation\Application))
+#5 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'getIndex', Array)
+#6 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#7 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#8 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#9 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#10 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#12 C:\Program Files (x86)\Ampps\www\stock-manager\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 {main} [] []
+[2014-01-30 02:00:34] log.ERROR: exception 'ErrorException' with message 'Undefined variable: active' in C:\Program Files (x86)\Ampps\www\stock-manager\app\storage\views\99a4a2fcaceaf8cc1121ff334750d252:68
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\stock-manager\app\storage\views\99a4a2fcaceaf8cc1121ff334750d252(68): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'C:\Program File...', 68, Array)
+#1 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\Program File...', Array)
+#3 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\Program File...', Array)
+#4 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#5 C:\Program Files (x86)\Ampps\www\stock-manager\app\storage\views\34e0312be77b3d88ca583ddaac8f02d1(52): Illuminate\View\View->render()
+#6 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\Program File...')
+#7 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\Program File...', Array)
+#8 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\Program File...', Array)
+#9 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#10 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#11 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#12 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#13 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(156): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#14 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(126): Illuminate\Routing\Controllers\Controller->processResponse(Object(Illuminate\Routing\Router), 'getCheckout', Object(Illuminate\View\View))
+#15 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'getCheckout', Array)
+#16 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#17 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#18 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#19 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#20 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#21 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#22 C:\Program Files (x86)\Ampps\www\stock-manager\public\index.php(49): Illuminate\Foundation\Application->run()
+#23 {main} [] []
+[2014-01-30 02:05:02] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '{'' in C:\Program Files (x86)\Ampps\www\stock-manager\app\storage\views\ea37d215d7f67c1a21af55583f3bf5b1:20
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-01-30 02:13:54] log.ERROR: exception 'ErrorException' with message 'array_diff(): Argument #1 is not an array' in C:\Program Files (x86)\Ampps\www\stock-manager\app\controllers\WebController.php:65
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'array_diff(): A...', 'C:\Program File...', 65, Array)
+#1 C:\Program Files (x86)\Ampps\www\stock-manager\app\controllers\WebController.php(65): array_diff(NULL, Array)
+#2 [internal function]: WebController->postVoidItem()
+#3 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#4 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postVoidItem', Array)
+#5 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postVoidItem', Array)
+#6 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#7 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#8 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#9 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#10 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#12 C:\Program Files (x86)\Ampps\www\stock-manager\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 {main} [] []

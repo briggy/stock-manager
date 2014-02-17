@@ -1,0 +1,4 @@
+[2014-01-29 06:00:49] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}'' in C:\Program Files (x86)\Ampps\www\stock-manager\app\controllers\WebController.php:27
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []

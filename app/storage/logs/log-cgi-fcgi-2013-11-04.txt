@@ -1,0 +1,4 @@
+[2013-11-04 09:06:36] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '['' in /home/bdiggers/public_html/annas/stock-manager/app/routes.php:5
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []

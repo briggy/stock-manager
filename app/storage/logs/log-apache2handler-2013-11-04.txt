@@ -1,0 +1,934 @@
+[2013-11-04 06:15:17] log.ERROR: exception 'BadMethodCallException' with message 'Call to undefined method Illuminate\Database\Query\Builder::image()' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php:1658
+Stack trace:
+#0 [internal function]: Illuminate\Database\Query\Builder->__call('image', Array)
+#1 [internal function]: Illuminate\Database\Query\Builder->image()
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#3 [internal function]: Illuminate\Database\Eloquent\Builder->__call('image', Array)
+#4 [internal function]: Illuminate\Database\Eloquent\Builder->image()
+#5 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(2636): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\annas-inventory\app\storage\views\019b2d9c38f565ad1996da1322c10448(62): Illuminate\Database\Eloquent\Model->__call('image', Array)
+#7 C:\xampp\htdocs\annas-inventory\app\storage\views\019b2d9c38f565ad1996da1322c10448(62): Product->image()
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\xampp\htdocs...')
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\xampp\htdocs...', Array)
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\xampp\htdocs...', Array)
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#12 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#13 C:\xampp\htdocs\annas-inventory\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#14 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(156): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(126): Illuminate\Routing\Controllers\Controller->processResponse(Object(Illuminate\Routing\Router), 'edit', Object(Illuminate\View\View))
+#17 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'edit', Array)
+#18 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('13')
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#25 {main} [] []
+[2013-11-04 06:19:34] log.ERROR: exception 'Symfony\Component\Routing\Exception\MissingMandatoryParametersException' with message 'Some mandatory parameters are missing ("products") to generate a URL for route "products.update".' in C:\xampp\htdocs\annas-inventory\vendor\symfony\routing\Symfony\Component\Routing\Generator\UrlGenerator.php:155
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\symfony\routing\Symfony\Component\Routing\Generator\UrlGenerator.php(140): Symfony\Component\Routing\Generator\UrlGenerator->doGenerate(Array, Array, Array, Array, Array, 'products.update', true, Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\UrlGenerator.php(192): Symfony\Component\Routing\Generator\UrlGenerator->generate('products.update', Array, true)
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Html\FormBuilder.php(809): Illuminate\Routing\UrlGenerator->route('products.update')
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Html\FormBuilder.php(766): Illuminate\Html\FormBuilder->getRouteAction('products.update')
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Html\FormBuilder.php(109): Illuminate\Html\FormBuilder->getAction(Array)
+#5 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Html\FormBuilder.php(151): Illuminate\Html\FormBuilder->open(Array)
+#6 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(209): Illuminate\Html\FormBuilder->model(Object(Product), Array)
+#7 C:\xampp\htdocs\annas-inventory\app\storage\views\019b2d9c38f565ad1996da1322c10448(14): Illuminate\Support\Facades\Facade::__callStatic('model', Array)
+#8 C:\xampp\htdocs\annas-inventory\app\storage\views\019b2d9c38f565ad1996da1322c10448(14): Illuminate\Support\Facades\Form::model(Object(Product), Array)
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\xampp\htdocs...')
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\xampp\htdocs...', Array)
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\xampp\htdocs...', Array)
+#12 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#13 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#14 C:\xampp\htdocs\annas-inventory\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(156): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#17 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(126): Illuminate\Routing\Controllers\Controller->processResponse(Object(Illuminate\Routing\Router), 'edit', Object(Illuminate\View\View))
+#18 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'edit', Array)
+#19 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('16')
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#25 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#26 {main} [] []
+[2013-11-04 06:24:00] log.ERROR: exception 'ErrorException' with message 'Undefined variable: Id' in C:\xampp\htdocs\annas-inventory\app\controllers\ProductsController.php:88
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\app\controllers\ProductsController.php(88): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'C:\xampp\htdocs...', 88, Array)
+#1 [internal function]: ProductsController->update('16')
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('update', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'update', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('16')
+#6 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-11-04 06:24:50] log.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in C:\xampp\htdocs\annas-inventory\app\controllers\ProductsController.php:92
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\app\controllers\ProductsController.php(92): Illuminate\Exception\Handler->handleError(8, 'Trying to get p...', 'C:\xampp\htdocs...', 92, Array)
+#1 [internal function]: ProductsController->update('13')
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('update', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'update', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('13')
+#6 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2013-11-04 06:40:30] log.ERROR: exception 'ErrorException' with message 'Undefined variable: prds' in C:\xampp\htdocs\annas-inventory\app\storage\views\0e414d0c8a2e75f00c0ce3252dc95bae:35
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\app\storage\views\0e414d0c8a2e75f00c0ce3252dc95bae(35): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'C:\xampp\htdocs...', 35, Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\xampp\htdocs...', Array)
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\xampp\htdocs...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#5 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#6 C:\xampp\htdocs\annas-inventory\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(156): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(126): Illuminate\Routing\Controllers\Controller->processResponse(Object(Illuminate\Routing\Router), 'index', Object(Illuminate\View\View))
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#11 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#12 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#13 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#14 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#18 {main} [] []
+[2013-11-04 06:45:05] log.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in C:\xampp\htdocs\annas-inventory\app\storage\views\0e414d0c8a2e75f00c0ce3252dc95bae:36
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\app\storage\views\0e414d0c8a2e75f00c0ce3252dc95bae(36): Illuminate\Exception\Handler->handleError(8, 'Trying to get p...', 'C:\xampp\htdocs...', 36, Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\xampp\htdocs...', Array)
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\xampp\htdocs...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#5 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#6 C:\xampp\htdocs\annas-inventory\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(156): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(126): Illuminate\Routing\Controllers\Controller->processResponse(Object(Illuminate\Routing\Router), 'index', Object(Illuminate\View\View))
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#11 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#12 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#13 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#14 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#18 {main} [] []
+[2013-11-04 06:45:25] log.ERROR: exception 'ErrorException' with message 'Undefined variable: p' in C:\xampp\htdocs\annas-inventory\app\storage\views\0e414d0c8a2e75f00c0ce3252dc95bae:39
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\app\storage\views\0e414d0c8a2e75f00c0ce3252dc95bae(39): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'C:\xampp\htdocs...', 39, Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\xampp\htdocs...', Array)
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\xampp\htdocs...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#5 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#6 C:\xampp\htdocs\annas-inventory\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(156): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(126): Illuminate\Routing\Controllers\Controller->processResponse(Object(Illuminate\Routing\Router), 'index', Object(Illuminate\View\View))
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#11 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#12 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#13 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#14 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#18 {main} [] []
+[2013-11-04 06:58:41] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'categ_id' in 'field list'' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:331
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(331): PDO->prepare('insert into `ca...')
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `ca...', Array)
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#5 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#6 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#12 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#13 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(33): Illuminate\Database\Eloquent\Model::create(Array)
+#14 [internal function]: CategsController->store()
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#17 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#18 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#25 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'categ_id' in 'field list' (SQL: insert into `categs` (`code`, `name`, `categ_id`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?)) (Bindings: array (
+  0 => 'sd',
+  1 => 'ds',
+  2 => '3',
+  3 => '2013-11-04 06:58:41',
+  4 => '2013-11-04 06:58:41',
+))' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'insert into `ca...', Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#5 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#12 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(33): Illuminate\Database\Eloquent\Model::create(Array)
+#13 [internal function]: CategsController->store()
+#14 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#17 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#18 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#24 {main} [] []
+[2013-11-04 06:59:17] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'categ_id' in 'field list'' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:331
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(331): PDO->prepare('insert into `ca...')
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `ca...', Array)
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#5 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#6 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#12 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#13 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(33): Illuminate\Database\Eloquent\Model::create(Array)
+#14 [internal function]: CategsController->store()
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#17 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#18 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#25 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'categ_id' in 'field list' (SQL: insert into `categs` (`code`, `name`, `categ_id`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?)) (Bindings: array (
+  0 => 'sd',
+  1 => 'ds',
+  2 => '3',
+  3 => '2013-11-04 06:59:17',
+  4 => '2013-11-04 06:59:17',
+))' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'insert into `ca...', Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#5 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#12 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(33): Illuminate\Database\Eloquent\Model::create(Array)
+#13 [internal function]: CategsController->store()
+#14 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#17 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#18 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#24 {main} [] []
+[2013-11-04 07:04:59] log.ERROR: exception 'Symfony\Component\Routing\Exception\MissingMandatoryParametersException' with message 'Some mandatory parameters are missing ("categs") to generate a URL for route "categs.update".' in C:\xampp\htdocs\annas-inventory\vendor\symfony\routing\Symfony\Component\Routing\Generator\UrlGenerator.php:155
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\symfony\routing\Symfony\Component\Routing\Generator\UrlGenerator.php(140): Symfony\Component\Routing\Generator\UrlGenerator->doGenerate(Array, Array, Array, Array, Array, 'categs.update', true, Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\UrlGenerator.php(192): Symfony\Component\Routing\Generator\UrlGenerator->generate('categs.update', Array, true)
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Html\FormBuilder.php(809): Illuminate\Routing\UrlGenerator->route('categs.update')
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Html\FormBuilder.php(766): Illuminate\Html\FormBuilder->getRouteAction('categs.update')
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Html\FormBuilder.php(109): Illuminate\Html\FormBuilder->getAction(Array)
+#5 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Html\FormBuilder.php(151): Illuminate\Html\FormBuilder->open(Array)
+#6 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(209): Illuminate\Html\FormBuilder->model(Object(Categ), Array)
+#7 C:\xampp\htdocs\annas-inventory\app\storage\views\a233f33152097b8a6ef134afaafe2f5d(14): Illuminate\Support\Facades\Facade::__callStatic('model', Array)
+#8 C:\xampp\htdocs\annas-inventory\app\storage\views\a233f33152097b8a6ef134afaafe2f5d(14): Illuminate\Support\Facades\Form::model(Object(Categ), Array)
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\xampp\htdocs...')
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\xampp\htdocs...', Array)
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\xampp\htdocs...', Array)
+#12 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#13 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#14 C:\xampp\htdocs\annas-inventory\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(156): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#17 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(126): Illuminate\Routing\Controllers\Controller->processResponse(Object(Illuminate\Routing\Router), 'edit', Object(Illuminate\View\View))
+#18 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'edit', Array)
+#19 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('1')
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#25 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#26 {main} [] []
+[2013-11-04 07:11:44] log.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bdiggers_annas`.`categs`, CONSTRAINT `FK_categs_categs` FOREIGN KEY (`parent_id`) REFERENCES `categs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:331
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(331): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `ca...', Array)
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#5 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#6 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#12 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#13 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(39): Illuminate\Database\Eloquent\Model::create(Array)
+#14 [internal function]: CategsController->store()
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#17 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#18 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#25 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bdiggers_annas`.`categs`, CONSTRAINT `FK_categs_categs` FOREIGN KEY (`parent_id`) REFERENCES `categs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) (SQL: insert into `categs` (`code`, `name`, `parent_id`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?)) (Bindings: array (
+  0 => 'h.2',
+  1 => 'Elect',
+  2 => '',
+  3 => '2013-11-04 07:11:43',
+  4 => '2013-11-04 07:11:43',
+))' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'insert into `ca...', Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#5 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#12 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(39): Illuminate\Database\Eloquent\Model::create(Array)
+#13 [internal function]: CategsController->store()
+#14 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#17 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#18 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#24 {main} [] []
+[2013-11-04 07:11:59] log.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bdiggers_annas`.`categs`, CONSTRAINT `FK_categs_categs` FOREIGN KEY (`parent_id`) REFERENCES `categs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:331
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(331): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `ca...', Array)
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#5 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#6 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#12 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#13 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(39): Illuminate\Database\Eloquent\Model::create(Array)
+#14 [internal function]: CategsController->store()
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#17 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#18 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#25 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bdiggers_annas`.`categs`, CONSTRAINT `FK_categs_categs` FOREIGN KEY (`parent_id`) REFERENCES `categs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) (SQL: insert into `categs` (`code`, `name`, `parent_id`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?)) (Bindings: array (
+  0 => 'h.2',
+  1 => 'Electrical',
+  2 => '',
+  3 => '2013-11-04 07:11:59',
+  4 => '2013-11-04 07:11:59',
+))' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'insert into `ca...', Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#5 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#12 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(39): Illuminate\Database\Eloquent\Model::create(Array)
+#13 [internal function]: CategsController->store()
+#14 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#17 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#18 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#24 {main} [] []
+[2013-11-04 07:14:15] log.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bdiggers_annas`.`categs`, CONSTRAINT `FK_categs_categs` FOREIGN KEY (`parent_id`) REFERENCES `categs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:331
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(331): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `ca...', Array)
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#5 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#6 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#12 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#13 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(39): Illuminate\Database\Eloquent\Model::create(Array)
+#14 [internal function]: CategsController->store()
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#17 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#18 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#25 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bdiggers_annas`.`categs`, CONSTRAINT `FK_categs_categs` FOREIGN KEY (`parent_id`) REFERENCES `categs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) (SQL: insert into `categs` (`code`, `name`, `parent_id`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?)) (Bindings: array (
+  0 => 'h12',
+  1 => 'Electrical',
+  2 => '',
+  3 => '2013-11-04 07:14:14',
+  4 => '2013-11-04 07:14:14',
+))' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'insert into `ca...', Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#5 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#12 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(39): Illuminate\Database\Eloquent\Model::create(Array)
+#13 [internal function]: CategsController->store()
+#14 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#17 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#18 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#24 {main} [] []
+[2013-11-04 07:15:19] log.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bdiggers_annas`.`categs`, CONSTRAINT `FK_categs_categs` FOREIGN KEY (`parent_id`) REFERENCES `categs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:331
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(331): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `ca...', Array)
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#5 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#6 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#12 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#13 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(39): Illuminate\Database\Eloquent\Model::create(Array)
+#14 [internal function]: CategsController->store()
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#17 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#18 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#25 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bdiggers_annas`.`categs`, CONSTRAINT `FK_categs_categs` FOREIGN KEY (`parent_id`) REFERENCES `categs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) (SQL: insert into `categs` (`code`, `name`, `parent_id`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?)) (Bindings: array (
+  0 => 'sd',
+  1 => 'sadfsa',
+  2 => '',
+  3 => '2013-11-04 07:15:19',
+  4 => '2013-11-04 07:15:19',
+))' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'insert into `ca...', Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#5 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#12 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(39): Illuminate\Database\Eloquent\Model::create(Array)
+#13 [internal function]: CategsController->store()
+#14 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#17 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#18 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#24 {main} [] []
+[2013-11-04 07:17:10] log.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bdiggers_annas`.`categs`, CONSTRAINT `FK_categs_categs` FOREIGN KEY (`parent_id`) REFERENCES `categs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:331
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(331): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `ca...', Array)
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#5 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#6 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#12 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#13 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(39): Illuminate\Database\Eloquent\Model::create(Array)
+#14 [internal function]: CategsController->store()
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#17 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#18 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#25 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bdiggers_annas`.`categs`, CONSTRAINT `FK_categs_categs` FOREIGN KEY (`parent_id`) REFERENCES `categs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) (SQL: insert into `categs` (`code`, `name`, `parent_id`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?)) (Bindings: array (
+  0 => 'sadf',
+  1 => 'sdf',
+  2 => 'NULL',
+  3 => '2013-11-04 07:17:10',
+  4 => '2013-11-04 07:17:10',
+))' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'insert into `ca...', Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#5 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#12 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(39): Illuminate\Database\Eloquent\Model::create(Array)
+#13 [internal function]: CategsController->store()
+#14 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#17 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#18 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#24 {main} [] []
+[2013-11-04 07:17:48] log.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bdiggers_annas`.`categs`, CONSTRAINT `FK_categs_categs` FOREIGN KEY (`parent_id`) REFERENCES `categs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:331
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(331): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `ca...', Array)
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#5 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#6 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#12 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#13 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(39): Illuminate\Database\Eloquent\Model::create(Array)
+#14 [internal function]: CategsController->store()
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#17 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#18 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#25 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bdiggers_annas`.`categs`, CONSTRAINT `FK_categs_categs` FOREIGN KEY (`parent_id`) REFERENCES `categs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) (SQL: insert into `categs` (`code`, `name`, `parent_id`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?)) (Bindings: array (
+  0 => '1312',
+  1 => 'sadfsd',
+  2 => '0',
+  3 => '2013-11-04 07:17:48',
+  4 => '2013-11-04 07:17:48',
+))' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'insert into `ca...', Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#5 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#12 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(39): Illuminate\Database\Eloquent\Model::create(Array)
+#13 [internal function]: CategsController->store()
+#14 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#17 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#18 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#24 {main} [] []
+[2013-11-04 07:23:42] log.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bdiggers_annas`.`categs`, CONSTRAINT `FK_categs_categs` FOREIGN KEY (`parent_id`) REFERENCES `categs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:331
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(331): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `ca...', Array)
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#5 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#6 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#12 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#13 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(39): Illuminate\Database\Eloquent\Model::create(Array)
+#14 [internal function]: CategsController->store()
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#17 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#18 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#25 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bdiggers_annas`.`categs`, CONSTRAINT `FK_categs_categs` FOREIGN KEY (`parent_id`) REFERENCES `categs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) (SQL: insert into `categs` (`code`, `name`, `parent_id`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?)) (Bindings: array (
+  0 => '1312',
+  1 => 'sadfsd',
+  2 => '0',
+  3 => '2013-11-04 07:23:42',
+  4 => '2013-11-04 07:23:42',
+))' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'insert into `ca...', Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#5 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#12 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(39): Illuminate\Database\Eloquent\Model::create(Array)
+#13 [internal function]: CategsController->store()
+#14 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#17 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#18 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#24 {main} [] []
+[2013-11-04 07:24:06] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot access protected property Categ::$guarded' in C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php:39
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-11-04 07:25:59] log.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bdiggers_annas`.`categs`, CONSTRAINT `FK_categs_categs` FOREIGN KEY (`parent_id`) REFERENCES `categs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:331
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(331): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `ca...', Array)
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#5 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#6 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#12 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#13 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(42): Illuminate\Database\Eloquent\Model::create(Array)
+#14 [internal function]: CategsController->store()
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#17 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#18 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#25 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`bdiggers_annas`.`categs`, CONSTRAINT `FK_categs_categs` FOREIGN KEY (`parent_id`) REFERENCES `categs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) (SQL: insert into `categs` (`code`, `name`, `parent_id`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?)) (Bindings: array (
+  0 => '1312',
+  1 => 'sadfsd',
+  2 => '0',
+  3 => '2013-11-04 07:25:59',
+  4 => '2013-11-04 07:25:59',
+))' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'insert into `ca...', Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#5 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#12 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(42): Illuminate\Database\Eloquent\Model::create(Array)
+#13 [internal function]: CategsController->store()
+#14 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#17 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#18 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#24 {main} [] []
+[2013-11-04 07:26:18] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Using $this when not in object context' in C:\xampp\htdocs\annas-inventory\app\models\Categ.php:11
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-11-04 07:26:29] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Access to undeclared static property: Categ::$guarded' in C:\xampp\htdocs\annas-inventory\app\models\Categ.php:11
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-11-04 07:50:41] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'email' in 'field list'' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:331
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(331): PDO->prepare('insert into `ca...')
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `ca...', Array)
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#5 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#6 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#12 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#13 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(41): Illuminate\Database\Eloquent\Model::create(Array)
+#14 [internal function]: CategsController->store()
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#17 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#18 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#25 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'email' in 'field list' (SQL: insert into `categs` (`name`, `email`, `phone`, `company`, `address`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?, ?, ?)) (Bindings: array (
+  0 => 's',
+  1 => 'dd@yahoo.com',
+  2 => '123213212',
+  3 => '1',
+  4 => 'as',
+  5 => '2013-11-04 07:50:41',
+  6 => '2013-11-04 07:50:41',
+))' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'insert into `ca...', Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `ca...', Array, Object(Closure))
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `ca...', Array)
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `ca...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1444): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ca...', Array, 'id')
+#5 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(786): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1259): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1229): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1140): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(377): Illuminate\Database\Eloquent\Model->save()
+#12 C:\xampp\htdocs\annas-inventory\app\controllers\CategsController.php(41): Illuminate\Database\Eloquent\Model::create(Array)
+#13 [internal function]: CategsController->store()
+#14 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#17 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#18 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#24 {main} [] []
+[2013-11-04 08:32:31] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name[]' in 'field list'' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select `name[]`...')
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select `name[]`...', Array)
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select `name[]`...', Array, Object(Closure))
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select `name[]`...', Array)
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1136): Illuminate\Database\Query\Builder->get(Array)
+#7 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(191): Illuminate\Database\Query\Builder->lists('name[]', 'id')
+#8 [internal function]: Illuminate\Database\Eloquent\Builder->lists('name[]', 'id')
+#9 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(2636): call_user_func_array(Array, Array)
+#10 [internal function]: Illuminate\Database\Eloquent\Model->__call('lists', Array)
+#11 [internal function]: Categ->lists('name[]', 'id')
+#12 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(2650): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\annas-inventory\app\controllers\PurchasesController.php(17): Illuminate\Database\Eloquent\Model::__callStatic('lists', Array)
+#14 C:\xampp\htdocs\annas-inventory\app\controllers\PurchasesController.php(17): Categ::lists('name[]', 'id')
+#15 [internal function]: PurchasesController->index()
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#17 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#18 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#19 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#25 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#26 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name[]' in 'field list' (SQL: select `name[]`, `id` from `categs`) (Bindings: array (
+))' in C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select `name[]`...', Array)
+#1 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select `name[]`...', Array, Object(Closure))
+#2 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select `name[]`...', Array)
+#3 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1136): Illuminate\Database\Query\Builder->get(Array)
+#6 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(191): Illuminate\Database\Query\Builder->lists('name[]', 'id')
+#7 [internal function]: Illuminate\Database\Eloquent\Builder->lists('name[]', 'id')
+#8 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(2636): call_user_func_array(Array, Array)
+#9 [internal function]: Illuminate\Database\Eloquent\Model->__call('lists', Array)
+#10 [internal function]: Categ->lists('name[]', 'id')
+#11 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(2650): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\annas-inventory\app\controllers\PurchasesController.php(17): Illuminate\Database\Eloquent\Model::__callStatic('lists', Array)
+#13 C:\xampp\htdocs\annas-inventory\app\controllers\PurchasesController.php(17): Categ::lists('name[]', 'id')
+#14 [internal function]: PurchasesController->index()
+#15 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#17 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#18 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#19 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#20 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#21 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\annas-inventory\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\annas-inventory\public\index.php(49): Illuminate\Foundation\Application->run()
+#25 {main} [] []

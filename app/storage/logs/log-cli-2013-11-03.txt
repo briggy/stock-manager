@@ -1,0 +1,4 @@
+[2013-11-03 14:27:20] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'Route' (T_STRING)' in C:\xampp\htdocs\annas-inventory\app\routes.php:10
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []

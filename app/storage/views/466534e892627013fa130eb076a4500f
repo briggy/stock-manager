@@ -1,0 +1,30 @@
+
+<?php $__env->startSection('content'); ?>
+	
+	<div class="row ">
+		
+
+		<div class="span3">
+			<h4>Categories</h4>
+
+			<ul class="nav nav-list well">
+			  <li><a href="<?php echo url('web/products'); ?>"> <i class="icon-list"></i> All Categories</a></li>
+			<?php foreach($categs as $cat): ?>
+			  <li class="nav-header"><?php echo $cat->name; ?></li>
+			  <?php foreach($cat->subs as $sub_cat): ?>
+			  	<li><a href="<?php echo url('web/products/'.$sub_cat->id); ?>"> <i class="icon-chevron-right"></i> <?php echo $sub_cat->name; ?> <span class="badge badge-info pull-right"><?php echo count($sub_cat->products); ?></span></a> </li>
+			  <?php endforeach; ?>
+			<?php endforeach; ?>
+			</ul>
+		</div>
+		<div class="span9">
+			
+				<?php echo $__env->make('web.product.list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+		</div>
+
+	</div>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('web', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

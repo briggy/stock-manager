@@ -1,0 +1,56 @@
+[2014-02-05 22:40:13] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'return' (T_RETURN)' in C:\Program Files (x86)\Ampps\www\stock-manager\app\controllers\WebController.php:35
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-02-05 22:52:29] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ')', expecting :: (T_PAAMAYIM_NEKUDOTAYIM)' in C:\Program Files (x86)\Ampps\www\stock-manager\app\storage\views\466534e892627013fa130eb076a4500f:12
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-02-05 22:52:51] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ')', expecting :: (T_PAAMAYIM_NEKUDOTAYIM)' in C:\Program Files (x86)\Ampps\www\stock-manager\app\storage\views\466534e892627013fa130eb076a4500f:12
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-02-05 22:54:51] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'web' (T_STRING)' in C:\Program Files (x86)\Ampps\www\stock-manager\app\storage\views\466534e892627013fa130eb076a4500f:14
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-02-05 23:09:03] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in C:\Program Files (x86)\Ampps\www\stock-manager\app\controllers\WebController.php:43
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-02-05 23:09:23] log.ERROR: exception 'ErrorException' with message 'Undefined variable: cat' in C:\Program Files (x86)\Ampps\www\stock-manager\app\controllers\WebController.php:43
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\stock-manager\app\controllers\WebController.php(43): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'C:\Program File...', 43, Array)
+#1 [internal function]: WebController->getProducts()
+#2 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#3 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('getProducts', Array)
+#4 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'getProducts', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 C:\Program Files (x86)\Ampps\www\stock-manager\public\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-02-05 23:15:14] log.ERROR: exception 'ErrorException' with message 'Undefined variable: sub' in C:\Program Files (x86)\Ampps\www\stock-manager\app\storage\views\466534e892627013fa130eb076a4500f:15
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\stock-manager\app\storage\views\466534e892627013fa130eb076a4500f(15): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'C:\Program File...', 15, Array)
+#1 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\Program File...', Array)
+#3 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\Program File...', Array)
+#4 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#5 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#6 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#8 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(156): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#9 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(126): Illuminate\Routing\Controllers\Controller->processResponse(Object(Illuminate\Routing\Router), 'getProducts', Object(Illuminate\View\View))
+#10 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'getProducts', Array)
+#11 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('7')
+#12 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#13 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#14 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 C:\Program Files (x86)\Ampps\www\stock-manager\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 C:\Program Files (x86)\Ampps\www\stock-manager\public\index.php(49): Illuminate\Foundation\Application->run()
+#18 {main} [] []
