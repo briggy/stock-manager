@@ -20,14 +20,14 @@
                 <table class="table table-striped datatable">
                   <thead>
                     <tr>
-                      <th class="hidden-xs-portrait">ID</th>
-                      <th class="hidden-xs-portrait">Datetime</th>
-                      <th class="hidden-xs-portrait">Product Code</th>
+                      <th class="">ID</th>
+                      <th class="">Datetime</th>
+                      <th class="">Product Code</th>
                       <th>Product Name</th>
-                      <th class="hidden-xs"># of Purchased Items &nbsp;</th>
-                      <th class="hidden-xs">Remaining</th>
-                      <th class="hidden-xs">Unit Cost</th>
-                      <th class="hidden-xs">Total</th>
+                      <th class=""># of Purchased Items &nbsp;</th>
+                      <th class="">Remaining</th>
+                      <th class="">Unit Cost</th>
+                      <th class="">Total</th>
                     </tr>
                   </thead>
                   <tbody>

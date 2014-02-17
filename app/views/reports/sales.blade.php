@@ -90,14 +90,14 @@
                 <table class="table table-striped datatable">
                   <thead>
                     <tr>
-                      <th class="hidden-xs-portrait">ID</th>
-                      @if(!isset($hide_datetime))<th class="hidden-xs-portrait">Date</th>@endif
-                      <th class="hidden-xs-portrait">Product Code</th>
+                      <th class="">ID</th>
+                      @if(!isset($hide_datetime))<th class="">Date</th>@endif
+                      <th class="">Product Code</th>
                       <th>Product Name</th>
-                      <th class="hidden-xs"># of Sold Items</th>
-                      <th class="hidden-xs">Remaining</th>
-                      <th class="hidden-xs">Unit Price</th>
-                      <th class="hidden-xs">Total</th>
+                      <th class=""># of Sold Items</th>
+                      <th class="">Remaining</th>
+                      <th class="">Unit Price</th>
+                      <th class="">Total</th>
                     </tr>
                   </thead>
                   <tbody>
