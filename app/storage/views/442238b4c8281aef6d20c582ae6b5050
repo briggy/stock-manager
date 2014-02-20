@@ -19,14 +19,15 @@
                 <table class="table table-striped datatable">
                   <thead>
                     <tr>
-                      <th class="hidden-xs-portrait">ID</th>
-                      <th class="hidden-xs-portrait">Datetime</th>
-                      <th class="hidden-xs-portrait">Product Code</th>
+                      <th class="">ID</th>
+                      <th class="">Datetime</th>
+                      <th class="">Product Code</th>
                       <th>Product Name</th>
-                      <th class="hidden-xs"># of Purchased Items &nbsp;</th>
-                      <th class="hidden-xs">Remaining</th>
-                      <th class="hidden-xs">Unit Cost</th>
-                      <th class="hidden-xs">Total</th>
+                      <th class="">Initial Purchased Items &nbsp;</th>
+                      <th class="">Items Remained</th>
+                      <th class="">Added</th>
+                      <th class="">Unit Cost</th>
+                      <th class="">Total</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -36,12 +37,13 @@
 
                   	<tr>
                   		
-                      <td><?php echo $s->id; ?></td>
+                      <td><?php echo $s->id; ?> </td>
                       <td><?php echo date('M, d Y', strtotime($s->created_at)); ?></td>
                   		<td><?php echo $s->product->code; ?></td>
                   		<td><?php echo $s->product->name; ?></td>
-                  		<td><?php echo $s->qty; ?></td>
-                  		<td><?php echo $s->product->qty(); ?></td>
+                  		<td><?php echo $s->qtyFirstPurchased(); ?></td>
+                      <td><?php echo $s->product->qty(); ?></td>
+                  		<td><?php echo $s->product->added(); ?></td>
                   		<!-- <td><?php echo $s->inventory->type(); ?></td> -->
                   		<td><?php echo number_format($s->cost,2); ?></td>
                   		<td align="right"><b><?php echo number_format($s->total,2); ?></b></td>

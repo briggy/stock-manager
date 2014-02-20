@@ -24,8 +24,8 @@
                       <th class="">Datetime</th>
                       <th class="">Product Code</th>
                       <th>Product Name</th>
-                      <th class=""># of Purchased Items &nbsp;</th>
-                      <th class="">Remaining</th>
+                      <th class="">Initial Purchased Items &nbsp;</th>
+                      <th class="">Items Remained</th>
                       <th class="">Added</th>
                       <th class="">Unit Cost</th>
                       <th class="">Total</th>
