@@ -50,4 +50,22 @@ class Product extends Eloquent {
 
 		return $total-$sales;
 	}
+
+	public function added()
+	{
+		$i = Inventory::purchases()->lists('id');
+		$t = Transaction::orderBy('id', 'asc')->whereIn('inventory_id', $i)->where('product_id', $this->id)->get();
+		$total = 0;
+
+		if(count($t)){
+			unset($t[0]);
+		}
+
+		foreach ($t as $v) {
+			$total += $v->qty;
+		}
+
+		return $total;
+		
+	}
 }

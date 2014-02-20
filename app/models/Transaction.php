@@ -19,4 +19,10 @@ class Transaction extends Eloquent {
 	{
 		return $q->where('created_at', '=', time());
 	}
+
+	public function qtyFirstPurchased()
+	{
+		$t = Transaction::orderBy('id','asc')->where('product_id', $this->product->id)->first();
+		return $t->remaining;
+	}
 }

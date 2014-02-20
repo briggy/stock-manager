@@ -92,6 +92,8 @@ class ReportsController extends BaseController {
 		$sales = $this->salesQry($i);
 		$total = $this->totalSales($i);
 		$pt = 'Monthly Sales';
+
+		
 		return View::make('reports.sales', compact('sales', 'total', 'pt', 'filter_type', 'date_text', 'hide_datetime'));
 	}
 

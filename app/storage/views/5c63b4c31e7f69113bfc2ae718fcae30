@@ -1,14 +1,14 @@
 <?php $__env->startSection('js'); ?>
 		
-	<script type="text/javascript">
+  <script type="text/javascript">
 
 		function addToCart(p_id){
 			$.post('<?php echo url('web/cart'); ?>', {id:p_id}, function(data){
 				$("#modal_cart .content").html(data);
 			});
-		}
+		} 
 
-	</script>
+  </script>
 
 <?php $__env->stopSection(); ?>
 
@@ -32,4 +32,4 @@
             <?php endforeach; ?>
 
             </ul>
-          </div>
+</div>

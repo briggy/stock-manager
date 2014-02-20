@@ -26,6 +26,7 @@
                       <th>Product Name</th>
                       <th class=""># of Purchased Items &nbsp;</th>
                       <th class="">Remaining</th>
+                      <th class="">Added</th>
                       <th class="">Unit Cost</th>
                       <th class="">Total</th>
                     </tr>
@@ -37,12 +38,13 @@
 
                   	<tr>
                   		
-                      <td>{{ $s->id }}</td>
+                      <td>{{ $s->id }} </td>
                       <td>{{ date('M, d Y', strtotime($s->created_at)) }}</td>
                   		<td>{{ $s->product->code }}</td>
                   		<td>{{ $s->product->name }}</td>
-                  		<td>{{ $s->qty }}</td>
-                  		<td>{{ $s->product->qty() }}</td>
+                  		<td>{{ $s->qtyFirstPurchased() }}</td>
+                      <td>{{ $s->product->qty() }}</td>
+                  		<td>{{ $s->product->added() }}</td>
                   		<!-- <td>{{ $s->inventory->type() }}</td> -->
                   		<td>{{ number_format($s->cost,2) }}</td>
                   		<td align="right"><b>{{ number_format($s->total,2) }}</b></td>
