@@ -34,6 +34,13 @@ class ProductsController extends BaseController {
 	 *
 	 * @return Response
 	 */
+
+
+public function com()
+	{
+        return View::make('products.com');
+	}
+
 	public function store()
 	{
 

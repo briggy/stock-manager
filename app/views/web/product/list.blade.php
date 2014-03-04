@@ -20,13 +20,23 @@
               <li class="span3">
                 <div class="thumbnail">
                   <img data-src="holder.js/300x200" alt="300x200" style="width: 300px; height: 200px;" src="{{ $p->img() }}">
+
                   <div class="caption">
                     <h3>{{ Str::limit($p->name, 15) }}</h3>
-                    <p><b>Php {{ number_format($p->price, 2) }} </b><br> {{ $p->qty() }} items left.</p>
+                    <p><b>Php {{ number_format($p->price, 2) }} </b><br> {{ $p->qtyShelves() }} items left.</p>
                     <!-- <p><a href="#modal_details" data-toggle="modal" class="btn btn-primary">Details</a> -->
                     <a @if($p->qty()) href="#modal_cart" data-toggle="modal"  onclick="addToCart({{ $p->id }})" @else  disabled @endif class="btn">Add to Cart</a></p>
                   </div>
                 </div>
+
+
+                <br>
+                <input type="text" name="textarea"/>
+                <br>
+                <input type="button" name="button" value="comment"/>
+                <input type="reset" name="reset" value="clear"/>
+                <br></br>
+
               </li>
 
             @endforeach

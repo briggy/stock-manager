@@ -9,7 +9,7 @@ class ReportsController extends BaseController {
 
 	public function purchaseQry($i)
 	{
-		$qry = $i ? Transaction::with('product')->orderBy('id', 'asc')->select(DB::raw('*,  sum(qty) as qty,  sum(total) as total'))->groupBy('product_id')->whereIn('inventory_id', $i)->get() : array(); 
+		$qry = $i ? Transaction::with('product.shelves')->orderBy('id', 'asc')->select(DB::raw('*,  sum(qty) as qty,  sum(total) as total'))->groupBy('product_id')->whereIn('inventory_id', $i)->get() : array(); 
 		// $qry = $i ? Transaction::with('product', 'inventory')->orderBy('id', 'desc')->whereIn('inventory_id', $i)->get() : array(); 
 		return $qry;
 	}
@@ -42,6 +42,9 @@ class ReportsController extends BaseController {
 		elseif($type == 'monthly'):
 			$date = Input::get('date');
 			return $this->getMonthlySales($date);
+		elseif($type == 'monthlyReport'):
+			$date = Input::get('date');
+			return $this->getMonthlyReports($date);
 		endif;
 	}
 
@@ -53,12 +56,16 @@ class ReportsController extends BaseController {
 		$date_text = 'Sales as of '.$date_text;
 
 		$i = Inventory::sales()->today($custom_date)->lists('id');
-		$sales = $this->salesQry($i);
+
+		// Sales Qry
+		$sales = $i ? Transaction::with('product')->orderBy('id', 'desc')->whereIn('inventory_id', $i)->get() : array(); 
+
+		// $sales = $this->salesQry($i);
 		$total = $this->totalSales($i);
 		$pt = 'Daily Sales';
 		$hide_datetime = true;
 		$filter_type = 'daily';
-		return View::make('reports.sales', compact('sales', 'total', 'pt', 'date_text', 'hide_datetime', 'filter_type'));
+		return View::make('reports.dailysales', compact('sales', 'total', 'pt', 'date_text', 'hide_datetime', 'filter_type'));
 	}
 
 	public function getWeeklySales($start_date = null, $end_date = null)
@@ -76,7 +83,7 @@ class ReportsController extends BaseController {
 		$sales = $this->salesQry($i);
 		$total = $this->totalSales($i);
 		$pt = 'Weekly Sales';
-		return View::make('reports.sales', compact('sales', 'total', 'pt', 'filter_type', 'date_text', 'hide_datetime'));
+		return View::make('reports.weekmonthsales', compact('sales', 'total', 'pt', 'filter_type', 'date_text', 'hide_datetime'));
 	}
 
 	public function getMonthlySales($custom_date = null)
@@ -87,21 +94,23 @@ class ReportsController extends BaseController {
 
 		$hide_datetime = true;
 
-
 		$i = Inventory::sales()->monthly($custom_date)->lists('id');
 		$sales = $this->salesQry($i);
 		$total = $this->totalSales($i);
 		$pt = 'Monthly Sales';
 
-		
-		return View::make('reports.sales', compact('sales', 'total', 'pt', 'filter_type', 'date_text', 'hide_datetime'));
+		return View::make('reports.weekmonthsales', compact('sales', 'total', 'pt', 'filter_type', 'date_text', 'hide_datetime'));
 	}
 
-	public function getPurchaseReports()
+	public function getMonthlyReports($date = null)
 	{
-		$i = Inventory::purchases()->lists('id');
+		$i = Inventory::monthly($date)->lists('id');
 		// $sales_list = Inventory::sales()->lists('id');
 		// $purchases_list = Inventory::purchases()->lists('id');
+
+
+		$date_text = $date ? date('F', strtotime($date)) : date('F');
+		$date_text = 'Reports as of the Month of '.$date_text;
 
 		$sales = $this->purchaseQry($i);
 
@@ -109,8 +118,8 @@ class ReportsController extends BaseController {
 		// $total_sales = $this->totalSales($sales_list);
 		// $total_purchase = $this->totalSales($purchases_list);
 		
-		$pt = 'Purchase Report';
-		return View::make('reports.purchases', compact('sales', 'i', 'total', 'pt'));
+		$pt = 'Monthly Report';
+		return View::make('reports.purchases', compact('sales', 'i', 'total', 'pt', 'date_text'));
 		// return View::make('reports.purchases', compact('sales', 'total_sales', 'total_purchase', 'pt'));
 	}
 

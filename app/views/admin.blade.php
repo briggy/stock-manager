@@ -74,8 +74,8 @@
         	<i class="{{ $nav->icon }}"></i> {{ $nav->txt }} 
         	@if(count($nav->subs))
         	<span class="label label-info pull-right">{{ count($nav->subs) }}</span>
-        	<i class="arrow icon-angle-left"></i>
-        	@endif
+          <i class="arrow icon-angle-left"></i>
+          @endif
         </a>
 
         @if(count($nav->subs))

@@ -73,8 +73,8 @@
         	<i class="<?php echo $nav->icon; ?>"></i> <?php echo $nav->txt; ?> 
         	<?php if(count($nav->subs)): ?>
         	<span class="label label-info pull-right"><?php echo count($nav->subs); ?></span>
-        	<i class="arrow icon-angle-left"></i>
-        	<?php endif; ?>
+          <i class="arrow icon-angle-left"></i>
+          <?php endif; ?>
         </a>
 
         <?php if(count($nav->subs)): ?>

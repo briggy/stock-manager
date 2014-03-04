@@ -42,7 +42,7 @@
             </div>
             <!-- /widget-header -->
             <div class="widget-content">
-              <div class="shortcuts"> <a class="shortcut" href="{{ route('products.index') }}"> <i class="shortcut-icon icon-list-alt"></i><span class="shortcut-label">Products</span> </a>
+              <div class="shortcuts"> <a class="shortcut" href="{{ route('products.index') }}"> <i class="shortcut-icon icon-list-alt"></i><span class="shortcut-label">Product</span> </a>
               <a class="shortcut" href="{{ route('purchases.index') }}"><i class="shortcut-icon icon-bookmark"></i><span class="shortcut-label">Purchases</span> </a>
               <a class="shortcut" href="{{ route('sales.index') }}"><i class="shortcut-icon icon-signal"></i> <span class="shortcut-label">Sales</span> </a>
               <a class="shortcut" href="{{ route('suppliers.index') }}"> <i class="shortcut-icon icon-comment"></i><span class="shortcut-label">Suppliers</span> </a>

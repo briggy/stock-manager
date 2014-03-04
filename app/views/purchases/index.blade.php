@@ -1,6 +1,6 @@
 @extends('admin')
 
-@section('pt')  Purchase Orders <small>Please use the table below to navigate or filter the results.</small>  @stop
+@section('pt')  Purchases <small>Please use the table below to navigate or filter the results.</small>  @stop
 
 @section('c')
 	

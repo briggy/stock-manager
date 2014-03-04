@@ -11,7 +11,7 @@
 <div class="login-content">
   <div class="widget-content" style="padding-bottom:0;">
 
-  @include('alerts')
+  @include('alerts')  
 
   {{ Form::open(array('url'=>'auth/check','class'=>'no-margin')) }}
 
@@ -48,9 +48,12 @@
         <!-- <a href="{{ url('web') }}" class="pull-right btn btn-primary" style="margin:0 5px;">Return to Site</a> -->
 
 
-				<button class="btn btn-warning pull-right" type="submit">
+				<button class="btn btn-warning pull-right" type="submit">  
 				Login <i class="m-icon-swapright m-icon-white"></i>
 				</button> 
+        
+         
+
 
 			</div>
             

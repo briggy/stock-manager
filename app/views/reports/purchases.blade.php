@@ -2,8 +2,36 @@
 
 @section('pt') {{ $pt }} @stop
 
+@section('js')
+@parent
+<script type="text/javascript">
+  
+  $(document).ready(function(){
+
+    $('.input-group.date').datepicker({
+          todayBtn: "linked",
+        
+          minViewMode: 1,
+          format: "yyyy-mm",
+       
+
+        todayHighlight: true,
+
+    });
+
+    
+  });
+
+</script>
+
+@stop
+
 @section('c')
-	
+
+
+<?php 
+  $total = 0;
+?>	
 	 <div class="row">
         <div class="col-lg-12">
 
@@ -13,22 +41,46 @@
 
             		<div class="body">
 
-        <button class="btn btn-primary" onclick="window.print()">Print</button> <br /> <br />
+                <div class="row">
+          <div class="col-md-12">
+            <button class="btn btn-primary" onclick="window.print()">Print</button> <br /> <br />
+          </div>
+
+          <div class="col-md-6">
+             <h3 style="padding:0; margin:0;">{{ $date_text }}</h3>
+          </div>
+
+          {{ Form::open(['url'=>'reports/filter-sales']) }}
+          {{ Form::hidden('filter_type', 'monthlyReport') }}
 
 
-            		
+          <div class="col-md-5">
+
+            <div class="input-group date">
+              <input type="text" placeholder="Select Date" class="form-control" required name="date" value="{{ Input::get('date') }}"><span class="input-group-addon"><i class="icon-calendar"></i></span>
+            </div>
+
+          </div>  
+
+          <div>
+              <button class="btn">Select</button>
+          </div>  
+
+          {{ Form::close() }}
+
+        </div>
+
                 <table class="table table-striped datatable">
                   <thead>
                     <tr>
                       <th class="">ID</th>
-                      <th class="">Datetime</th>
-                      <th class="">Product Code</th>
                       <th>Product Name</th>
-                      <th class="">Initial Purchased Items &nbsp;</th>
-                      <th class="">Items Remained</th>
-                      <th class="">Added</th>
-                      <th class="">Unit Cost</th>
-                      <th class="">Total</th>
+                      <th class="">Stocks on Hand</th>
+                      <th class="">Stocks on Shelves</th>
+                      <th class="">Sold Items</th>
+                      <th class="">Total Items</th>
+                      <th class="">Price</th>
+                      <th class="">Total Sales</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -39,15 +91,17 @@
                   	<tr>
                   		
                       <td>{{ $s->id }} </td>
-                      <td>{{ date('M, d Y', strtotime($s->created_at)) }}</td>
-                  		<td>{{ $s->product->code }}</td>
                   		<td>{{ $s->product->name }}</td>
-                  		<td>{{ $s->qtyFirstPurchased() }}</td>
-                      <td>{{ $s->product->qty() }}</td>
-                  		<td>{{ $s->product->added() }}</td>
-                  		<!-- <td>{{ $s->inventory->type() }}</td> -->
-                  		<td>{{ number_format($s->cost,2) }}</td>
-                  		<td align="right"><b>{{ number_format($s->total,2) }}</b></td>
+                      <td>{{ $s->product->stocksOnHand() }}</td>
+
+                      <td>{{ $s->product->qtyShelves() }}</td>
+                      <td>{{ $s->product->soldItems() }}</td>
+                      <td>{{ $s->product->totalItems }}</td>
+
+                  		<td>{{ number_format($s->price,2) }}</td>
+                  		<td align="right"><b>{{ number_format($s->product->soldItems*$s->price,2) }}</b></td>
+
+                      <?php $total += $s->product->soldItems*$s->price; ?>
 
                   	</tr>
 

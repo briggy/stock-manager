@@ -51,8 +51,8 @@ a:link {
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="logo_navbar">
-	 <img src="{{ url('webassets') }}/homelogo.jpg"/>
+<div class="logo_navbar" >
+	 <img src="{{ url('webassets') }}/homelogo.jpg" />
 </div>
 <div class="navbar navbar-inverse navbar-fixed-top">
 	<div class="navbar-inner homenav">

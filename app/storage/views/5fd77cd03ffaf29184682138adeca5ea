@@ -42,9 +42,17 @@ a:link {
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body bgcolor="#CCCCCC">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="logo_navbar">
-	 <img src="<?php echo url('webassets'); ?>/homelogo.jpg"/>
+<div class="logo_navbar" >
+	 <img src="<?php echo url('webassets'); ?>/homelogo.jpg" />
 </div>
 <div class="navbar navbar-inverse navbar-fixed-top">
 	<div class="navbar-inner homenav">
@@ -67,6 +75,7 @@ a:link {
               
 		        <li <?php echo $active == 'home' ? 'class="active"' : ''; ?>><a href="<?php echo url('web'); ?>">Home</a></li>
 		        <li <?php echo $active == 'about' ? 'class="active"' : ''; ?>><a href="<?php echo url('web/about'); ?>">About</a></li>
+		        <li <?php echo $active == 'comment' ? 'class="active"' : ''; ?>><a href="<?php echo url('web/comments'); ?>">Comment</a></li>
 		        <li <?php echo $active == 'gallery' ? 'class="active"' : ''; ?>><a href="<?php echo url('web/gallery'); ?>">Gallery</a></li>
 		        <!-- <li><a href="products.html">Supplies</a></li> -->
 		        <li <?php echo $active == 'products' ? 'class="active"' : ''; ?>><a href="<?php echo url('web/products'); ?>">Products</a></li>

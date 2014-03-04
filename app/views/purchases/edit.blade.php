@@ -1,6 +1,6 @@
 @extends('admin')
 
-@section('pt') Update Purchase Order @stop
+@section('pt') Update Purchase @stop
 
 @section('js')
 @parent

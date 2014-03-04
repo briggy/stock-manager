@@ -9,7 +9,7 @@
           <div class="widget">
             <div class="widget-header">
              
-              <i class="icon-tasks"></i><h3>List Products</h3>
+              <i class="icon-tasks"></i><h3>List of Products</h3>
             </div>
             <div class="widget-content">
 
