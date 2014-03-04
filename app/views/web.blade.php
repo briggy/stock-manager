@@ -42,6 +42,14 @@ a:link {
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body bgcolor="#CCCCCC">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="logo_navbar">
 	 <img src="{{ url('webassets') }}/homelogo.jpg"/>
@@ -67,6 +75,7 @@ a:link {
               
 		        <li {{ $active == 'home' ? 'class="active"' : '' }}><a href="{{ url('web') }}">Home</a></li>
 		        <li {{ $active == 'about' ? 'class="active"' : '' }}><a href="{{ url('web/about') }}">About</a></li>
+		        <li {{ $active == 'comment' ? 'class="active"' : '' }}><a href="{{ url('web/comments') }}">Comment</a></li>
 		        <li {{ $active == 'gallery' ? 'class="active"' : '' }}><a href="{{ url('web/gallery') }}">Gallery</a></li>
 		        <!-- <li><a href="products.html">Supplies</a></li> -->
 		        <li {{ $active == 'products' ? 'class="active"' : '' }}><a href="{{ url('web/products') }}">Products</a></li>

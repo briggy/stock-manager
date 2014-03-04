@@ -16,6 +16,12 @@ class WebController extends BaseController {
 		return View::make('web.about', ['head_title'=>'About Annas Electrical Supply', 'active'=>$active]);
 	}
 
+	public function getComments()
+	{
+		$active = 'comment';
+		return View::make('web.comment', ['head_title'=>'Comments ', 'active'=>$active]);
+	}
+
 	public function getGallery()
 	{
 		$active = 'gallery';
